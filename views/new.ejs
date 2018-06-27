@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/new" method="post">
+      <h3>NOME DO USUÁRIO</h3>
+      <input type="text" name="name"><br><br>
+
+      <h3>GÊNERO</h3>
+      <select name="gender">
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+      </select><br><br>
+
+      <h3>PROJETO</h3>
+      <input type="text" name="project"><br><br>
+
+      <h3>MÁQUINA</h3>
+      <select name="machine">
+        <option value="laser">Corte a Laser</option>
+        <option value="3dprinter">Impressora 3D</option>
+      </select><br><br>
+
+      <h3>LABORATÓRIO</h3>
+      <select name="lab">
+        <option value="tiradentes" selected>Fab Lab CFC Cidade Tiradentes</option>
+        <option value="heliopolis">Fab Lab CEU Heliópolis</option>
+        <option value="jockey">Fab Lab Chácara do Jóckey</option>
+        <option value="itororo">Fab Lab Vila Itororó</option>
+        <option value="olido">Fab Lab Olido Cibernarium</option>
+        <option value="ccj">Fab Lab CCJ</option>
+        <option value="ccsp">Fab Lab CCSP</option>
+        <option value="itaquera">Fab Lab Casa da Memória Itaquera</option>
+        <option value="penha">Fab Lab Centro Cultural da Penha</option>
+        <option value="tres_pontes">Fab Lab CEU 3 Pontes</option>
+        <option value="guarapiranga">Fab Lab S. Joaquim / Guarapiranga</option>
+        <option value="anhanguera">Fab Lab CEU Anhanguera</option>
+      </select><br><br>
+
+      <h3>TEMPO ESTIMADO</h3>
+      <input type="text" name="estimated_time"><br><br>
+      <button type="submit">Adicionar</button>
+    </form>
+  </body>
+</html>
