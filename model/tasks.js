@@ -4,7 +4,7 @@ module.exports = function() {
 
   var task = mongoose.Schema({
     name: String,
-    gender: Boolean,
+    gender: String,
     project: String,
     machine: String,
     lab: String,
