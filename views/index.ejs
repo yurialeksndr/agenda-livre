@@ -3,11 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <% if (tasks.length == 0) { %>
+      <p>NO ENTRIES YET.</p>
+    <% } else { %>
+      <% for(var i = tasks.length - 1 ; i >= 0 ; i--) { %>
+        <p><%= tasks[i].name %></p>
+        <p><%= tasks[i].project %></p>
+        <p><%= tasks[i].estimated_time %> minutos</p>
+        <p><%= tasks[i].status ? 'concluído' : 'em espera' %></p>
+        <br>
+    <% } } %>
     <p><%= tasks %></p>
   </body>
 </html>
