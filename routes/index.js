@@ -18,13 +18,21 @@ labs_by_day = [
 router.get("/", function(request, response, next) {
 
   var date = new Date();
+  var today = date.getDay();
 
-  model.find({ lab : [labs_by_day[date.getDay()][0], labs_by_day[date.getDay()][1]] }, function(error, tasks) {
-    if (error) {
-      throw error;
-    }
-    response.render("index", { title: title, tasks: tasks });
-  });
+  //TODAY IS SUNDAY AND THERE IS NO ACTIVITY
+  if (today == 0) {
+    response.render("sunday", {title: title});
+  }
+
+  else {
+    model.find({ lab : [labs_by_day[today][0], labs_by_day[today][1]] }, function(error, tasks) {
+      if (error) {
+        throw error;
+      }
+      response.render("index", { title: title, tasks: tasks });
+    });
+  }
 });
 
 router.get("/new", function(request, response, next) {
