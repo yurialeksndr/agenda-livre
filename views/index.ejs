@@ -7,17 +7,41 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+
+    <div id="title">
+      <h1>AGENDA LIVRE</h1>
+    </div>
+
     <% if (tasks.length == 0) { %>
       <p>NO ENTRIES YET.</p>
     <% } else { %>
-      <% for(var i = tasks.length - 1 ; i >= 0 ; i--) { %>
-        <p><%= tasks[i].name %></p>
-        <p><%= tasks[i].project %></p>
-        <p><%= tasks[i].estimated_time %> minutos</p>
-        <p><%= tasks[i].status ? 'concluído' : 'em espera' %></p>
-        <br>
-    <% } } %>
+      <div id="infotable">
+        <div class='divTable'>
+          <div class='divTableBody'>
+
+            <div id='header' class='divTableRow'>
+            	<div class='divTableCell divTableHeading column01'>#</div>
+            	<div class='divTableCell divTableHeading column02'>NOME</div>
+            	<div class='divTableCell divTableHeading column03'>PROJETO</div>
+              <div class='divTableCell divTableHeading column04'>TEMPO</div>
+              <div class='divTableCell divTableHeading column05'>STATUS</div>
+            </div>
+
+            <% for(var i = 0 ; i < tasks.length ; i++) { %>
+              <div class='divTableRow'>
+                <div class='divTableCell column01'> <%= i+1 %> </div>
+                <div class='divTableCell column02'> <%= tasks[i].name %> </div>
+                <div class='divTableCell column03'> <%= tasks[i].project %> </div>
+                <div class='divTableCell column04'> <%= tasks[i].estimated_time %> MIN</div>
+                <div class='divTableCell column05'> <%= tasks[i].status ? 'concluído' : 'em espera' %> </div>
+              </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    <% } %>
+
     <p><%= tasks %></p>
+
   </body>
 </html>

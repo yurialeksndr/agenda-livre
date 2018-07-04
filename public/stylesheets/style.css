@@ -1,8 +1,72 @@
 body {
-  padding: 50px;
+  color: #575757;
   font-family: 'Share Tech Mono', monospace;
+  background: #f2f2f2 url(../img/overlay.png);
 }
 
 a {
-  color: #00B7FF;
+  color: #575757;
+}
+
+#title {
+  text-align: center;
+  margin-top: 80px;
+}
+
+#infotable {
+	width: 60vw;
+	margin: 0 auto;
+	margin-top: 35px;
+	font-size: 1.25vw;
+	font-family: 'Share Tech Mono', monospace;
+	text-transform: uppercase;
+	margin-bottom: 100px;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+	border: 0px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCell {
+	border: 2px solid #f2f2f2;
+	display: table-cell;
+	padding: 10px 10px;
+	background-color:rgba(50, 50, 50, 0.2);
+  width: 25%;
+}
+
+.divTableHeading {
+	background-color:rgba(50, 50, 50, 0.5);
+}
+
+.column01 {
+  width: 2%;
+}
+
+.column02 {
+  width: 30%;
+}
+
+.column03 {
+  width: 38%;
+}
+
+.column04 {
+  width: 15%;
+}
+
+.column05 {
+  width: 15%;
 }
